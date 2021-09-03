@@ -96,6 +96,8 @@ gameBoard = cloneboard;
 cloneboard = new bool[boardWidth, boardHeight];
 ```
 
+> ```bool[,]``` es la declaración de un vector o arreglo -array- multidimensional. Puedes ver [aquí](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/arrays/multidimensional-arrays) más información.
+
 ### Leer Archivo
 Este snippet muestra como leer un archivo y crear un array bi-dimensional de booleanos (```bool[,]```) con el contenido. Se asume que cada linea del archivo corresponde a una fila de la matriz y cada caracter de la fila corresponde a un elemento de la fila correspondiente de la matriz. Tambien se asume que el archivo contiene solamente los caracteres ```1``` y ```0``` correspondientes a ```true``` y ```false``` respectivamente y que todas las filas son de igual largo.
 Por ejemplo, el siguiente archivo de texto:
@@ -137,6 +139,10 @@ for (int  y=0; y<contentLines.Length;y++)
 }
 ```
 
+> La clase ```File``` está definida en el espacio de nombres ```Sytem.IO```. Debes incluirlo utilizando una cláusula ```using```.
+
+> Como el caracter ```\``` que se utilizan para escribir rutas a archivos -dependiendo del sistema operativo- tiene un signficiado especial en una cadena de caracteres -indica una secuencia de escape, por ejemplo ```\n``` indica una nueva línea- puedes especificar la ruta usando ```@"../../assets/board.txt"``` por ejemplo. Ten en cuenta que el archivo que te proveemos ```board.txt``` en la carpeta ```assets``` está en un ubicación diferente de la carpeta ```Program``` en la que se ejecuta tu programa, y debes indicar la ubicación del archivo utilizando una ruta relativa.
+
 ### Imprimir Tablero
 Aqui se muestra como imprimir un tablero por consola. Observa que este código requiere invocar el snippet de la lógica de juego
 
@@ -170,3 +176,5 @@ while (true)
     Thread.Sleep(300);
 }
 ```
+
+> La clase ```StringBuilder``` está definida en el espacio de nombres ```Sytem.Text```. Debes incluirlo utilizando una cláusula ```using```.
