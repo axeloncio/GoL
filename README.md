@@ -22,7 +22,7 @@ En cada iteración del tiempo (generación) una célula estará viva o muerta se
 ## Parte 1
 Como tributo a Conway ¡hoy vamos a crear este juego en consola! Para ello te vamos a proveer de varios code [snippets](https://en.wikipedia.org/wiki/Snippet_(programming)) y será tu trabajo asignarlos a la clase correcta cumpliendo con Expert y SRP.
 
-El objetivo será desarrollar este juego mediante objetos diferentes, cada uno con una resposnabilidad única (SRP). El tablero deberá ser cargado a partir de un archivo de texto y luego el avance del juego deberá ser impreso en pantalla mediante consola.
+El objetivo será desarrollar este juego mediante objetos diferentes, cada uno con una responsabilidad única (SRP). El tablero deberá ser cargado a partir de un archivo de texto y luego el avance del juego deberá ser impreso en pantalla mediante consola.
 
 > :exclamation: Debes tener en cuenta que hoy se pide que el juego se lea desde un archivo y se imprima en consola, pero mañana podremos pedirles que se lea de una fuente diferente y se muestre en pantalla por otro medio :wink:
 
@@ -93,7 +93,6 @@ for (int x = 0; x < boardWidth; x++)
     }
 }
 gameBoard = cloneboard;
-cloneboard = new bool[boardWidth, boardHeight];
 ```
 
 > ```bool[,]``` es la declaración de un vector o arreglo -array- multidimensional. Puedes ver [aquí](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/arrays/multidimensional-arrays) más información.
