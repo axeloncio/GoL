@@ -8,7 +8,9 @@ namespace PII_Game_Of_Life
     private string url = @"../../assets/board.txt";
     private string[] contentLines;
 
-    public Read()
+
+
+    public bool[,] CreateBoard()
     {
       contentLines = ReadFile(); // Inicialización en el constructor
       bool[,] board = new bool[contentLines.Length, contentLines[0].Length];
@@ -25,10 +27,11 @@ namespace PII_Game_Of_Life
         }
       }
 
-      System.Console.WriteLine(board);
-
-
+      return board;
     }
+
+
+
 
     public string[] ReadFile()
     {
