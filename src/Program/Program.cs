@@ -8,14 +8,7 @@ namespace PII_Game_Of_Life
         {
 
             var read = new Read();
-
-            Matriz tablero = new Matriz(read.CreateBoard());
-
-
-            foreach (var line in tablero.board)
-            {
-                Console.WriteLine(line);
-            }
+            Matriz gameBoard = new Matriz(read.CreateBoard());
 
         }
     }
