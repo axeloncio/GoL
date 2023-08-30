@@ -6,7 +6,14 @@ namespace PII_Game_Of_Life
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var read = new Read();
+            var board = read.ReadFile();
+
+            foreach (var line in board)
+            {
+                Console.WriteLine(line);
+            }
+
         }
     }
 }
