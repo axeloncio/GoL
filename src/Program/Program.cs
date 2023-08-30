@@ -6,10 +6,13 @@ namespace PII_Game_Of_Life
     {
         static void Main(string[] args)
         {
-            var read = new Read();
-            var board = read.ReadFile();
 
-            foreach (var line in board)
+            var read = new Read();
+
+            Matriz tablero = new Matriz(read.CreateBoard());
+
+
+            foreach (var line in tablero.board)
             {
                 Console.WriteLine(line);
             }
