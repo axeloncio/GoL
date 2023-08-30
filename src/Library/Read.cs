@@ -8,8 +8,6 @@ namespace PII_Game_Of_Life
     private string url = @"../../assets/board.txt";
     private string[] contentLines;
 
-
-
     public bool[,] CreateBoard()
     {
       contentLines = ReadFile(); // Inicialización en el constructor
@@ -26,13 +24,8 @@ namespace PII_Game_Of_Life
           }
         }
       }
-
       return board;
     }
-
-
-
-
     public string[] ReadFile()
     {
       string[] lines = File.ReadAllLines(url);
@@ -40,4 +33,15 @@ namespace PII_Game_Of_Life
     }
 
   }
+
+  public class Matriz
+  {
+    public bool[,] board { get; set; }
+    public Matriz(bool[,] board)
+    {
+      this.board = board;
+    }
+  }
+
+
 }
