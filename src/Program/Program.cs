@@ -9,7 +9,7 @@ namespace PII_Game_Of_Life
 
             var read = new Read();
             Matriz gameBoard = new Matriz(read.CreateBoard());
-
+            Show.Imprimir(gameBoard);
         }
     }
 }
